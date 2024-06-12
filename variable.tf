@@ -16,9 +16,7 @@ variable "ami" {
 variable "vpc_security_group_id" {
     type = string
 }
-variable "availability_zone" {
-    type = list
-}
+
 variable "aws_lb" {
     type = string
 }
