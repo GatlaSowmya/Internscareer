@@ -18,7 +18,7 @@ resource "aws_key_pair" "test" {
 resource "aws_instance" "interns1" { 
  ami = var.ami
  instance_type = var.instance_type
- subnet_id = var.subnet_id[0]
+ subnet_id = var.subnet_id[1]
  key_name = aws_key_pair.test.key_name 
  vpc_security_group_ids = [var.vpc_security_group_id]
  tags = { 
@@ -46,7 +46,7 @@ resource "aws_instance" "interns1" {
 resource "aws_instance" "interns2" { 
  ami = var.ami
  instance_type = var.instance_type
- subnet_id = var.subnet_id[1]
+ subnet_id = var.subnet_id[0]
  key_name = aws_key_pair.test.key_name 
  vpc_security_group_ids = [var.vpc_security_group_id]
  tags = { 
