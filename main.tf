@@ -4,7 +4,7 @@ provider "aws" {
 
 resource "aws_key_pair" "test" { 
  key_name = var.key_name
- public_key = file("C:/Users/lenovo/Downloads/Common/prod.pub") 
+ public_key = file("./prod.pub") 
 } 
 resource "aws_instance" "interns1" { 
  ami = var.ami
@@ -18,7 +18,7 @@ resource "aws_instance" "interns1" {
  connection {
  type = "ssh" 
  user = "ubuntu" 
- private_key = file("C:/Users/lenovo/Downloads/Common/prod")  
+ private_key = file("./prod")  
  host = self.public_ip 
  timeout = "1m" 
  agent = false 
@@ -46,7 +46,7 @@ resource "aws_instance" "interns2" {
  connection {
  type = "ssh" 
  user = "ubuntu" 
- private_key = file("C:/Users/lenovo/Downloads/Common/prod")   
+ private_key = file("./prod")   
  host = self.public_ip 
  timeout = "1m" 
  agent = false 
