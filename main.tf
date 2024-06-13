@@ -5,7 +5,7 @@ terraform {
   cloud {
     organization = "Anil_main"
     workspaces {
-      name = "Siva"
+      name = "Siva "
     }
   }
 
